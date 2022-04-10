@@ -1,8 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { thunkGetAPIEconomia } from '../actions';
 
 class Header extends React.Component {
+  componentDidMount() {
+    const { requestApi } = this.props;
+    requestApi();
+  }
+
   render() {
     const { email } = this.props;
     return (
@@ -17,10 +23,15 @@ class Header extends React.Component {
 
 Header.propTypes = {
   email: PropTypes.string.isRequired,
+  requestApi: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
 });
 
-export default connect(mapStateToProps)(Header);
+const mapDispatchToProps = (dispatch) => ({
+  requestApi: () => dispatch(thunkGetAPIEconomia()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
