@@ -5,6 +5,7 @@ export const NEW_USER = 'NEW_USER';
 export const GET_CURRENCIES_SUCESS = 'GET_CURRENCIES_SUCESS';
 export const GET_CURRENCIES_FAIL = 'GET_CURRENCIES_FAIL';
 export const SAVE_INFO = 'SAVE_INFO';
+export const DELETE_LINE = 'DELETE_LINE';
 
 export const userAction = (email) => ({
   type: NEW_USER,
@@ -41,3 +42,8 @@ export const thunkGetCoin = (info) => async (dispatch) => {
   const response = await getEconomia();
   dispatch(actionSaveInfo(info, response));
 };
+
+export const deleteLine = (id) => ({
+  type: DELETE_LINE,
+  id,
+});

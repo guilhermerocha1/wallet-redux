@@ -12,7 +12,7 @@ class Header extends React.Component {
   handleUpdate = () => {
     const { expenses } = this.props;
     const totExpenses = expenses.reduce((acc, cur) => {
-      const sumCot = Number(cur.value); // * cur.exchangeRates[cur.coin].ask);
+      const sumCot = Number(cur.value * cur.exchangeRates[cur.coin].ask);
       return sumCot + acc;
     }, 0);
     return `Dispesa Total: ${totExpenses.toFixed(2)}`;

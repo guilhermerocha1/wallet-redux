@@ -1,5 +1,6 @@
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 import {
+  DELETE_LINE,
   GET_CURRENCIES_FAIL,
   GET_CURRENCIES_SUCESS,
   SAVE_INFO,
@@ -23,6 +24,11 @@ const walletReducer = (state = INITIAL_STATE, action) => {
         ...state.expenses,
         { ...action.info, exchangeRates: action.coins },
       ],
+    };
+  case DELETE_LINE:
+    return {
+      ...state,
+      expenses: state.expenses.filter((item) => item.id !== action.id),
     };
   default:
     return state;
