@@ -15,7 +15,7 @@ class Wallet extends React.Component {
       id: 0,
       value: '',
       description: '',
-      coin: 'USD',
+      currency: 'USD',
       method: 'Dinheito',
       tag: 'Alimentação',
     };
@@ -36,7 +36,7 @@ class Wallet extends React.Component {
 
   render() {
     const { currencies } = this.props;
-    const { value, description, coin, method, tag } = this.state;
+    const { value, description, currency, method, tag } = this.state;
     return (
       <div>
         <Header />
@@ -63,10 +63,15 @@ class Wallet extends React.Component {
             />
           </label>
 
-          <label htmlFor="coin">
+          <label htmlFor="currency">
             Moeda:
             <select
-              id="coin" value={ coin } onChange={ this.handleGeneric } name="coin" data-testid="currency-input">
+              id="currency"
+              value={ currency }
+              onChange={ this.handleGeneric }
+              name="currency"
+              data-testid="currency-input"
+            >
               {
                 currencies.map((selectCoins) => (
                   <option
@@ -89,6 +94,7 @@ class Wallet extends React.Component {
               value={ method }
               name="method"
               data-testid="method-input"
+              id="method"
             >
               {
                 arrMethod.map((selectMethod) => (
@@ -105,7 +111,13 @@ class Wallet extends React.Component {
 
           <label htmlFor="tag">
             Tag:
-            <select onChange={ this.handleGeneric } value={ tag } name="tag" data-testid="tag-input">
+            <select
+              onChange={ this.handleGeneric }
+              value={ tag }
+              name="tag"
+              data-testid="tag-input"
+              id="tag"
+            >
               {
                 arrTag.map((selectTag) => (
                   <option
