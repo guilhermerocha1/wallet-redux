@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Table from '../components/Table';
-import { actionSaveInfo, thunkGetCoin } from '../actions';
+import { thunkGetCoin } from '../actions';
 
 const arrMethod = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
 const arrTag = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
@@ -27,10 +27,10 @@ class Wallet extends React.Component {
   }
 
   saveInfoUser = async () => {
-    const { id, coin, value, description, method, tag } = this.state;
+    const { id } = this.state;
     const { saveInfo } = this.props;
     this.setState({ id: id + 1 });
-    saveInfo({ id, coin, value, description, method, tag });
+    saveInfo(this.state);
     this.setState({ value: '' });
   }
 
@@ -128,19 +128,14 @@ class Wallet extends React.Component {
 Wallet.propTypes = {
   currencies: PropTypes.string,
   saveInfo: PropTypes.func,
-  requestApi: PropTypes.func,
-  expenses: PropTypes.array,
-  requestApiExchage: PropTypes.func,
 }.isRequired;
 
 const mapStateToProps = (state) => ({
   currencies: state.wallet.currencies,
-  expenses: state.wallet.expenses,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  saveInfo: (info) => dispatch(actionSaveInfo(info)),
-  requestApiExchage: () => dispatch(thunkGetCoin()),
+  saveInfo: (info) => dispatch(thunkGetCoin(info)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Wallet);

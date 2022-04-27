@@ -1,30 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { thunkGetAPIEconomia, thunkGetCoin } from '../actions';
+import { thunkGetAPIEconomia } from '../actions';
 
 class Header extends React.Component {
   componentDidMount() {
-    const { requestApi, requestApiExchage } = this.props;
-    requestApi();
-    requestApiExchage();
+    const { requestCurrencies } = this.props;
+    requestCurrencies();
   }
 
   handleUpdate = () => {
-    const { value, exchange } = this.props;
-    if (value.length > 0) {
-      const allExpenses = value.reduce((prev, curr) => {
-        const currTotal = Number(curr.value)
-        * exchange.filter(({ code }) => code === curr.coin)
-          .map(({ ask }) => ask)[0];
-
-        const sumExpensesTotal = prev + currTotal;
-
-        return sumExpensesTotal;
-      }, 0);
-      return `Dispesa Total: ${allExpenses.toFixed(2)}`;
-    }
-    return 'Dispesa Total: 0,00';
+    const { expenses } = this.props;
+    const totExpenses = expenses.reduce((acc, cur) => {
+      const sumCot = Number(cur.value); // * cur.exchangeRates[cur.coin].ask);
+      return sumCot + acc;
+    }, 0);
+    return `Dispesa Total: ${totExpenses.toFixed(2)}`;
   }
 
   render() {
@@ -41,21 +32,17 @@ class Header extends React.Component {
 
 Header.propTypes = {
   email: PropTypes.string,
-  requestApi: PropTypes.func,
-  value: PropTypes.array,
-  requestApiExchage: PropTypes.func,
-  exchange: PropTypes.object,
+  requestCurrencies: PropTypes.func,
+  expenses: PropTypes.array,
 }.isRequired;
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
-  value: state.wallet.expenses,
-  exchange: state.wallet.exchangeRates,
+  expenses: state.wallet.expenses,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  requestApi: () => dispatch(thunkGetAPIEconomia()),
-  requestApiExchage: () => dispatch(thunkGetCoin()),
+  requestCurrencies: () => dispatch(thunkGetAPIEconomia()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
