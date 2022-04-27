@@ -41,9 +41,10 @@ class Wallet extends React.Component {
       <div>
         <Header />
         <div>
-          <label htmlFor="value" data-testid="value-input">
+          <label htmlFor="value">
             Valor:
             <input
+              data-testid="value-input"
               type="number"
               onChange={ this.handleGeneric }
               value={ value }
@@ -51,9 +52,10 @@ class Wallet extends React.Component {
             />
           </label>
 
-          <label htmlFor="description" data-testid="description-input">
+          <label htmlFor="description">
             Descrição:
             <input
+              data-testid="description-input"
               type="text"
               onChange={ this.handleGeneric }
               value={ description }
@@ -63,11 +65,11 @@ class Wallet extends React.Component {
 
           <label htmlFor="coin">
             Moeda:
-            <select id="coin" value={ coin } onChange={ this.handleGeneric } name="coin">
+            <select
+              id="coin" value={ coin } onChange={ this.handleGeneric } name="coin" data-testid="currency-input">
               {
                 currencies.map((selectCoins) => (
                   <option
-                    data-testid="currency-input"
                     key={ selectCoins }
                     value={ selectCoins }
                   >
@@ -80,10 +82,14 @@ class Wallet extends React.Component {
 
           <label
             htmlFor="method"
-            data-testid="method-input"
           >
             Método de pagamento:
-            <select onChange={ this.handleGeneric } value={ method } name="method">
+            <select
+              onChange={ this.handleGeneric }
+              value={ method }
+              name="method"
+              data-testid="method-input"
+            >
               {
                 arrMethod.map((selectMethod) => (
                   <option
@@ -97,9 +103,9 @@ class Wallet extends React.Component {
             </select>
           </label>
 
-          <label htmlFor="tag" data-testid="tag-input">
+          <label htmlFor="tag">
             Tag:
-            <select onChange={ this.handleGeneric } value={ tag } name="tag">
+            <select onChange={ this.handleGeneric } value={ tag } name="tag" data-testid="tag-input">
               {
                 arrTag.map((selectTag) => (
                   <option

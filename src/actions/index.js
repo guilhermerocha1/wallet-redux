@@ -39,8 +39,12 @@ export const actionSaveInfo = (info, coins) => ({
 });
 
 export const thunkGetCoin = (info) => async (dispatch) => {
-  const response = await getEconomia();
-  dispatch(actionSaveInfo(info, response));
+  try {
+    const response = await getEconomia();
+    dispatch(actionSaveInfo(info, response));
+  } catch (error) {
+    dispatch(actionSaveInfo(info, error));
+  }
 };
 
 export const deleteLine = (id) => ({
