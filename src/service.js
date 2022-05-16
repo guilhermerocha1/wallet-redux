@@ -3,7 +3,7 @@ const getEconomia = async () => {
   return fetch(url)
     .then((response) => response.json())
     .then((date) => date)
-    .catch((err) => err);
+    .catch((error) => error);
 };
 
 export default getEconomia;
