@@ -24,6 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -58,5 +59,5 @@
     "stylelint": "13.8.0",
     "stylelint-config-standard": "20.0.0"
   },
-  "homepage": "https://guilhermeroch1.github.io/project-wallet-35640"
+  "homepage": "https://guilhermeroch1.github.io/project-wallet-redux"
 }
