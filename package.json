@@ -23,11 +23,8 @@
     "stylelint-order": "4.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -60,9 +57,5 @@
     "stylelint": "13.8.0",
     "stylelint-config-standard": "20.0.0"
   },
-  "homepage": "https://guilhermeroch1.github.io/project-wallet-redux",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  }
+  "homepage": "https://guilhermeroch1.github.io/project-wallet-35640"
 }
