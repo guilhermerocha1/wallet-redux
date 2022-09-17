@@ -1,0 +1,103 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 1352.05px;
+  height: 965.39px;
+  left: -5.05px;
+  top: -147.39px;
+
+  z-index: -10;
+}
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 525px;
+  height: 356px;
+  left: 377px;
+  top: 201px;
+
+  background: #FFFFFF;
+  box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
+  border-radius: 10px;
+  z-index: 1;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input::placeholder {
+  color: #003BE5;
+  padding-left: 5px;
+}
+
+.input-login {
+  box-sizing: border-box;
+  width: 330px;
+  height: 30px;
+  left: 475px;
+  top: 360px;
+  margin-bottom: 5px;
+
+  background: #FFFFFF;
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+}
+
+.button-login {
+  box-sizing: border-box;
+
+  width: 330px;
+  color: white;
+  height: 30px;
+  left: 475px;
+  top: 460px;
+  margin-bottom: 5px;
+
+  background: #003BE5;
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+}
+
+#trybe {
+  height: 33.79px;
+  left: 569.03px;
+  top: 281.44px;
+  color: #003BE5;
+  font-weight: 500;
+
+  color: #003BE5;
+}
+
+#wallet {
+  width: 112.15px;
+  height: 26.76px;
+  left: 661.13px;
+  top: 281.44px;
+  font-weight: 900;
+
+  color: #2FC18C;
+}
+
+img {
+  width: 90px;
+  left: 40.24%;
+  right: 56.58%;
+  top: 37.57%;
+  bottom: 56.78%;
+
+  background-color: #003BE5;
+}
+
+.title {
+  display: flex;
+  margin-bottom: 30px;
+}
+
