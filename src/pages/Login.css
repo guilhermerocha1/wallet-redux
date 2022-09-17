@@ -3,10 +3,10 @@ body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 1352.05px;
-  height: 965.39px;
+  width: 99%;
+  height: 80%;
   left: -5.05px;
-  top: -147.39px;
+  top: 30.39px;
 
   z-index: -10;
 }
