@@ -49,16 +49,16 @@ class Login extends React.Component {
     const { saveUser } = this.props;
     const { email, password, validationBtn } = this.state;
     return (
-      <div className='container-main'>
-        <div className='title'>
-          <img src={ image } alt='imagem dinheiro' />
-          <h1 id='trybe'>Trybe</h1><h1 id='wallet'> Wallet</h1>
+      <div className="container-main">
+        <div className="title">
+          <img src={ image } alt="imagem dinheiro" />
+          <h1 id="trybe">Trybe</h1><h1 id="wallet"> Wallet</h1>
         </div>
-        <div className='container-login'>
+        <div className="container-login">
           <label htmlFor="email">
             <input
-              className='input-login'
-              placeholder='Email'
+              className="input-login"
+              placeholder="Email"
               type="email"
               data-testid="email-input"
               onChange={ this.validationEmail }
@@ -68,8 +68,8 @@ class Login extends React.Component {
           </label>
           <label htmlFor="password">
             <input
-              className='input-login'
-              placeholder='Senha'
+              className="input-login"
+              placeholder="Senha"
               type="password"
               data-testid="password-input"
               onChange={ this.validatePassword }
@@ -79,7 +79,7 @@ class Login extends React.Component {
           </label>
           <Link to="/carteira">
             <button
-              className='button-login'
+              className="button-login"
               onClick={ () => saveUser(email) }
               type="button"
               disabled={ validationBtn }
