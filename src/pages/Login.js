@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { userAction } from '../actions';
+import './Login.css';
+import image from '../image/image1.jpg';
 
 const MAX_LENGTH = 6;
 const emailRegex = /\S+@\S+\.\S+/;
@@ -47,37 +49,44 @@ class Login extends React.Component {
     const { saveUser } = this.props;
     const { email, password, validationBtn } = this.state;
     return (
-      <div>
-        <h2>Tela de Login</h2>
-        <label htmlFor="email">
-          Email:
-          <input
-            type="email"
-            data-testid="email-input"
-            onChange={ this.validationEmail }
-            value={ email }
-            name="email"
-          />
-        </label>
-        <label htmlFor="password">
-          Senha:
-          <input
-            type="password"
-            data-testid="password-input"
-            onChange={ this.validatePassword }
-            value={ password }
-            name="password"
-          />
-        </label>
-        <Link to="/carteira">
-          <button
-            onClick={ () => saveUser(email) }
-            type="button"
-            disabled={ validationBtn }
-          >
-            Entrar
-          </button>
-        </Link>
+      <div className="container-main">
+        <div className="title">
+          <h1 id="trybe">Trybe</h1><h1 id="wallet"> Wallet</h1>
+        </div>
+        <div className="container-login">
+          <label htmlFor="email">
+            <input
+              className="input-login"
+              placeholder="Email"
+              type="email"
+              data-testid="email-input"
+              onChange={ this.validationEmail }
+              value={ email }
+              name="email"
+            />
+          </label>
+          <label htmlFor="password">
+            <input
+              className="input-login"
+              placeholder="Senha"
+              type="password"
+              data-testid="password-input"
+              onChange={ this.validatePassword }
+              value={ password }
+              name="password"
+            />
+          </label>
+          <Link to="/carteira">
+            <button
+              className="button-login"
+              onClick={ () => saveUser(email) }
+              type="button"
+              disabled={ validationBtn }
+            >
+              Entrar
+            </button>
+          </Link>
+        </div>
       </div>
     );
   }
