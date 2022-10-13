@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/project-wallet-redux/precache-manifest.d8b42773f2a94272fbaa8f0fde11d3b0.js"
+  "/project-wallet-redux/precache-manifest.7682e4a9939544b88a7d119d090310f0.js"
 );
 
 self.addEventListener('message', (event) => {
