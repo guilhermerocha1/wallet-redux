@@ -51,7 +51,6 @@ class Login extends React.Component {
     return (
       <div className="container-main">
         <div className="title">
-          <img src={ image } alt="imagem dinheiro" />
           <h1 id="trybe">Trybe</h1><h1 id="wallet"> Wallet</h1>
         </div>
         <div className="container-login">
