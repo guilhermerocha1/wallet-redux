@@ -23,7 +23,7 @@ class Header extends React.Component {
     const { email } = this.props;
     return (
       <div className='container-header'>
-        <h2 className='title'>Trybe Wallet</h2>
+        <h2 className='title'>TrybeWallet</h2>
         <p id='total-despensa' data-testid="total-field">Total Dispensa: {this.handleUpdate()} BRL</p>
         <p id='email' data-testid="email-field">{email}</p>
       </div>

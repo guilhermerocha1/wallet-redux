@@ -41,43 +41,46 @@ class Wallet extends React.Component {
     return (
       <div>
         <Header />
-        <div>
-          <label htmlFor="value">
-            Valor:
+        <div className='container-atribute'>
+          <label htmlFor="value" className='atributes'>
+            Valor
             <input
+              className='input-label'
               data-testid="value-input"
               type="number"
-              onChange={ this.handleGeneric }
-              value={ value }
+              onChange={this.handleGeneric}
+              value={value}
               name="value"
             />
           </label>
 
-          <label htmlFor="description">
-            Descrição:
+          <label htmlFor="description" className='atributes'>
+            Descrição
             <input
+              className='input-label'
               data-testid="description-input"
               type="text"
-              onChange={ this.handleGeneric }
-              value={ description }
+              onChange={this.handleGeneric}
+              value={description}
               name="description"
             />
           </label>
 
-          <label htmlFor="currency">
-            Moeda:
+          <label htmlFor="currency" className='atributes'>
+            Moeda
             <select
+              className='input-label'
               id="currency"
-              value={ currency }
-              onChange={ this.handleGeneric }
+              value={currency}
+              onChange={this.handleGeneric}
               name="currency"
               data-testid="currency-input"
             >
               {
                 currencies.map((selectCoins) => (
                   <option
-                    key={ selectCoins }
-                    value={ selectCoins }
+                    key={selectCoins}
+                    value={selectCoins}
                   >
                     {selectCoins}
                   </option>
@@ -88,11 +91,13 @@ class Wallet extends React.Component {
 
           <label
             htmlFor="method"
+            className='atributes'
           >
-            Método de pagamento:
+            Método de pagamento
             <select
-              onChange={ this.handleGeneric }
-              value={ method }
+              className='input-label'
+              onChange={this.handleGeneric}
+              value={method}
               name="method"
               data-testid="method-input"
               id="method"
@@ -100,8 +105,8 @@ class Wallet extends React.Component {
               {
                 arrMethod.map((selectMethod) => (
                   <option
-                    key={ selectMethod }
-                    value={ selectMethod }
+                    key={selectMethod}
+                    value={selectMethod}
                   >
                     {selectMethod}
                   </option>
@@ -110,11 +115,12 @@ class Wallet extends React.Component {
             </select>
           </label>
 
-          <label htmlFor="tag">
-            Tag:
+          <label htmlFor="tag" className='atributes'>
+            Tag
             <select
-              onChange={ this.handleGeneric }
-              value={ tag }
+              className='input-label'
+              onChange={this.handleGeneric}
+              value={tag}
               name="tag"
               data-testid="tag-input"
               id="tag"
@@ -122,8 +128,8 @@ class Wallet extends React.Component {
               {
                 arrTag.map((selectTag) => (
                   <option
-                    key={ selectTag }
-                    value={ selectTag }
+                    key={selectTag}
+                    value={selectTag}
                   >
                     {selectTag}
                   </option>
@@ -131,9 +137,11 @@ class Wallet extends React.Component {
               }
             </select>
           </label>
+        </div>
+        <div className='container-buuton'>
           <button
             type="button"
-            onClick={ this.saveInfoUser }
+            onClick={this.saveInfoUser}
           >
             Adicionar despesa
           </button>
