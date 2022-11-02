@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Header from '../components/Header';
 import Table from '../components/Table';
 import { thunkGetCoin } from '../actions';
+import '../style/Wallet.css';
 
 const arrMethod = ['Dinheiro', 'Cartão de crédito', 'Cartão de débito'];
 const arrTag = ['Alimentação', 'Lazer', 'Trabalho', 'Transporte', 'Saúde'];
