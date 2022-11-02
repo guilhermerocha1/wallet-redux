@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { userAction } from '../actions';
-import './Login.css';
-import image from '../image/image1.jpg';
+import '../style/Login.css';
 
 const MAX_LENGTH = 6;
 const emailRegex = /\S+@\S+\.\S+/;

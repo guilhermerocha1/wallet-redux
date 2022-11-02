@@ -32,4 +32,4 @@ npm install
     npm test
   ```
 ## Link Projeto
-[GitHub Pages](https://guilhermerocha1.github.io/project-wallet-redux/)
+[GitHub Pages](https://guilhermerocha1.github.io/wallet-redux/)

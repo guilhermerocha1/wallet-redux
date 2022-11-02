@@ -1,5 +1,5 @@
 {
-  "name": "sd-0x-project-trybewallet",
+  "name": "wallet",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -62,5 +62,5 @@
     "stylelint": "13.8.0",
     "stylelint-config-standard": "20.0.0"
   },
-  "homepage": "https://guilhermeroch1.github.io/project-wallet-redux"
+  "homepage": "https://guilhermeroch1.github.io/wallet-redux"
 }
