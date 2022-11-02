@@ -1,0 +1,61 @@
+.container-atribute {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 50px 50px 50px 50px;
+  background: rgba(225, 229, 235, 0.49);
+  border-radius: 0px;
+}
+
+.atributes {
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+
+  color: #003BE5;
+}
+
+.input-label {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  width: 288.86px;
+  height: 30px;
+  left: 403.14px;
+  top: 179px;
+
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+}
+
+.container-buuton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(225, 229, 235, 0.49);
+}
+
+button {
+  width: 330px;
+  height: 40px;
+  left: 475px;
+  top: 318px;
+
+  background: #2FC18C;
+  border: 1px solid #2FC18C;
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+
+  color: #FFFFFF;
+}

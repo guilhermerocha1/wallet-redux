@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { thunkGetAPIEconomia } from '../actions';
+import '../style/Header.css';
 
 class Header extends React.Component {
   componentDidMount() {
@@ -21,10 +22,10 @@ class Header extends React.Component {
   render() {
     const { email } = this.props;
     return (
-      <div>
-        <p data-testid="email-field">{`Email: ${email}`}</p>
-        <p data-testid="total-field">{this.handleUpdate()}</p>
-        <p data-testid="header-currency-field">BRL</p>
+      <div className='container-header'>
+        <h2 className='title'>TrybeWallet</h2>
+        <p id='total-despensa' data-testid="total-field">Total Dispensa: {this.handleUpdate()} BRL</p>
+        <p id='email' data-testid="email-field">{email}</p>
       </div>
     );
   }
