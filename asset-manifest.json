@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/wallet-redux/static/css/main.ed5de189.chunk.css",
-    "main.js": "/wallet-redux/static/js/main.3c97f726.chunk.js",
-    "main.js.map": "/wallet-redux/static/js/main.3c97f726.chunk.js.map",
+    "main.css": "/wallet-redux/static/css/main.0456566a.chunk.css",
+    "main.js": "/wallet-redux/static/js/main.73ede179.chunk.js",
+    "main.js.map": "/wallet-redux/static/js/main.73ede179.chunk.js.map",
     "runtime-main.js": "/wallet-redux/static/js/runtime-main.74b036a9.js",
     "runtime-main.js.map": "/wallet-redux/static/js/runtime-main.74b036a9.js.map",
     "static/js/2.bec03465.chunk.js": "/wallet-redux/static/js/2.bec03465.chunk.js",
     "static/js/2.bec03465.chunk.js.map": "/wallet-redux/static/js/2.bec03465.chunk.js.map",
     "index.html": "/wallet-redux/index.html",
-    "precache-manifest.4500a9f7c89c8a2c307d4b1541b3e5b0.js": "/wallet-redux/precache-manifest.4500a9f7c89c8a2c307d4b1541b3e5b0.js",
+    "precache-manifest.10325d74fc22813b7ef8bec61ef95846.js": "/wallet-redux/precache-manifest.10325d74fc22813b7ef8bec61ef95846.js",
     "service-worker.js": "/wallet-redux/service-worker.js",
-    "static/css/main.ed5de189.chunk.css.map": "/wallet-redux/static/css/main.ed5de189.chunk.css.map",
+    "static/css/main.0456566a.chunk.css.map": "/wallet-redux/static/css/main.0456566a.chunk.css.map",
     "static/js/2.bec03465.chunk.js.LICENSE.txt": "/wallet-redux/static/js/2.bec03465.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.74b036a9.js",
     "static/js/2.bec03465.chunk.js",
-    "static/css/main.ed5de189.chunk.css",
-    "static/js/main.3c97f726.chunk.js"
+    "static/css/main.0456566a.chunk.css",
+    "static/js/main.73ede179.chunk.js"
   ]
 }
