@@ -2,13 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteLine } from '../actions';
+import '../style/Table.css';
 
 class Table extends React.Component {
   render() {
     const { expenses, prevDelete } = this.props;
     return (
       <div>
-        <table>
+        <table className='container-table'>
           <tbody>
             <tr>
               <th>Descrição</th>
@@ -40,6 +41,7 @@ class Table extends React.Component {
                       data-testid="delete-btn"
                       type="button"
                       onClick={ () => prevDelete(id) }
+                      id='button-excluir'
                     >
                       Excluir
                     </button>

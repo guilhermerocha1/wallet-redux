@@ -1,0 +1,41 @@
+.container-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+tr {
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 200px;
+}
+
+th {
+  text-align: center;
+  border: 20px;
+}
+
+td {
+  text-align: center;
+}
+
+#button-excluir {
+  width: 110px;
+  height: 40px;
+  left: 475px;
+  top: 318px;
+
+  background: #2FC18C;
+  border: 1px solid #2FC18C;
+  border-radius: 5px;
+  margin-bottom: 30px;
+
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+
+  color: #FFFFFF;
+}
